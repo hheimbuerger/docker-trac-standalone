@@ -9,7 +9,7 @@ RUN apt-get update && \
 COPY requirements.txt /tmp
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
-VOLUME ['/trac', '/git']
+VOLUME ["/trac", "/git"]
 
 EXPOSE 80
 

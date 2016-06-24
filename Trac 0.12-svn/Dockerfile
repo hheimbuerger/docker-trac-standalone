@@ -14,7 +14,7 @@ COPY requirements.txt /tmp
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
 # Define our volumes: /trac should be mounted to the 'Trac environment' and /svn to the SVN repository
-VOLUME ['/trac', '/svn']
+VOLUME ["/trac", "/svn"]
 
 # Export ports 80 (HTTP, by tracd) and 3690 (SVN, by svnserve)
 EXPOSE [80, 3690]
