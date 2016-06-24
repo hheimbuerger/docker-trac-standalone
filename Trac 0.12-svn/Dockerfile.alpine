@@ -1,0 +1,22 @@
+FROM python:2.7-alpine
+
+#RUN apt-get update && apt-get install -y supervisor python-subversion
+RUN set -ex \
+	&& apk add --no-cache --virtual .build-deps  \
+		supervisor \
+        subversion
+
+COPY requirements.txt /tmp
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+#COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY supervisord.conf /etc/supervisor.d/supervisord.ini
+
+# This is just needed because the python-subversion package is broken and doesn't properly link the 'svn' package into the site-packages (see https://serverfault.com/questions/388420/python-svn-bindings-importerror-no-module-named-svn)
+COPY dist-packages.pth /usr/local/lib/python2.7/site-packages/dist-packages.pth
+
+VOLUME ['/trac', '/svn']
+
+EXPOSE 80 3690
+
+CMD ["/usr/bin/supervisord"]

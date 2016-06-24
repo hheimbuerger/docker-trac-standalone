@@ -1,0 +1,2 @@
+Trac>=1.0,<1.1
+TracAccountManager==0.4.4
