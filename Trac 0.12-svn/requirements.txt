@@ -6,3 +6,5 @@ TracAccountManager==0.4.4
 #TracSpamFilter (0.4.7dev-r10669)
 #Warning: cannot find svn location for TracXMLRPC==1.1.2-r11148
 #TracXMLRPC (1.1.2-r11148)
+pygments
+pytz
