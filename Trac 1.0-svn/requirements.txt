@@ -1,6 +1,6 @@
 Trac>=1.0,<1.1
 TracAccountManager>=0.4.4,<0.5
-TracRobotsTxt
+git+https://github.com/hheimbuerger/TracRobotsTxt.git#egg=TracRobotsTxt
 pygments
 pytz
 textile
