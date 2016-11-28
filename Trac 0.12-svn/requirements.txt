@@ -1,10 +1,5 @@
 Trac>=0.12,<1.0
-TracAccountManager==0.4.4
-#TracCommitBackreferencer (0.1)
-#TracHTTPAuth==1.1
-#TracSpamFilter==0.2dev-r4489
-#TracSpamFilter (0.4.7dev-r10669)
-#Warning: cannot find svn location for TracXMLRPC==1.1.2-r11148
-#TracXMLRPC (1.1.2-r11148)
+TracAccountManager>=0.4.4,<0.5
+TracRobotsTxt
 pygments
 pytz
